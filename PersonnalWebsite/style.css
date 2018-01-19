@@ -1,0 +1,25 @@
+body{
+  display:block;
+  padding-top: 0 px;
+}
+#navBar{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 20% ;
+  height: 100%;
+  position: absolute;
+
+}
+
+#content{
+  width: 80%;
+  margin-left: 20%;
+  background-color: red;
+
+}
+button{
+  width: 50%;
+  margin-left:25%;
+  margin-right: 25%;
+  margin-top: 30%;
+
+}

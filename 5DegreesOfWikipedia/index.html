@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5 Degrees of Wikipedia</title>
+    <script type="text/javascript" src='jquery-3.2.1.js'></script>
+  </head>
+  <body>
+    <form name="form" class="" action="index.html" method="post">
+      <input id="un" type="text" name="" value="">
+      <button type="submit" name="button" value="">Chercher</button>
+      <input id="deux" type="text" name="" value="">
+
+    </form>
+    <p id="etapes"></p>
+  </body>
+  <script type="text/javascript">
+  $(form).on('submit',function(e){
+      e.preventDefault();
+    $('p').append($(un).val()+"<br/>");
+    $('p').append(tab);
+    $('p').append($(deux).val());
+});
+tab=[];
+function rechercheBacktracking(source,resultat,tab){
+  tab.push("trump");
+  inf=true;
+  return inf;
+}
+  </script>
+</html>
