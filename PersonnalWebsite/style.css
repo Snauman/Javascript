@@ -1,25 +1,81 @@
+
+html{
+  background-image: url("ressources/background-marble.jpg");
+  scroll-behavior: smooth;
+
+
+}
+
 body{
   display:block;
-  padding-top: 0 px;
+  padding: 0;
+
+
+
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+html,body{
+  height: 100%;
+
 }
 #navBar{
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 20% ;
-  height: 100%;
-  position: absolute;
-
+  margin-top: -20px;
+  margin-bottom: -20px;
+  margin-left: -20px;
+  background-color:rgba(0,0,0,0.5);
+  width: 19% ;
+  height: 120%;
+  padding: 0;
+  position: fixed;
 }
 
 #content{
-  width: 80%;
-  margin-left: 20%;
-  background-color: red;
+
+  padding: 0;
+  height: 100%;
+
 
 }
-button{
-  width: 50%;
-  margin-left:25%;
-  margin-right: 25%;
+
+#Page1,#Page2,#Page3,#Page4{
+  float: left;
+  display: block;
+  color: black;
+  /*background: rgba(0, 0, 0, 0.6);*/
+  width: 80%;
+  margin-bottom: 0px;
+  height: 100%;
+  margin-left: 20%;
+  margin-top: 0px;
+  font-size: 32px;
+
+
+}
+
+a{
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  border-radius: 40px;
+  color: black;
+  background-color: rgb(205, 204, 205);
+  text-decoration: none;
+  display: block;
+  height: 10%;
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
   margin-top: 30%;
 
 }
