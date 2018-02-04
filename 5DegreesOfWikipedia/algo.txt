@@ -1,0 +1,11 @@
+fonction truc()->booleen
+si satisfaisant
+alors retourne solution
+sinon
+selection des candidats
+pour chaque candidat faire
+candidat
+si(!truc())
+alors retirer candidats
+fin pour
+fin si
