@@ -1,5 +1,7 @@
 html{
   height: 100%;
+  background-color: rgb(68, 171, 10);
+  background-image: url("ressources/grass.jpg");
 }
 body{
   height: 100%;
@@ -7,20 +9,33 @@ body{
 }
 .rainbow{
   background-color:rgb(61, 137, 208);
-/*  background-image: url("ressources/ciel.jpg");*/
-  background-repeat: no-repeat;
+  background-image: url("ressources/sky.jpg");
+  float:left;
 }
 #upgrades{
-  background-color: rgb(102, 84, 21);
-  background-image: url('ressources/fond_bois.jpg');
+  background-color: yellow;
+  background-image: url("ressources/gold.jpg");
+  width:10%;
+  height: 100%;
+  float:left;
+  overflow-y:scroll;
+  display: inline-block;
 }
 
-.rainbow,#upgrades{
+#bonus{
+  background-color: rgb(102, 84, 21);
+  background-image: url('ressources/fond_bois.jpg');
+  overflow: scroll;
+  float:right;
+
+}
+
+.rainbow,#bonus{
+  margin:0;
   overflow: hidden;
-  float: left;
-  height: 95%;
+  height: 100%;
   width: 45%;
-  display: inline-block;
+  display: inline;
 }
 
 p{
@@ -29,6 +44,11 @@ p{
 
 img{
 
+  margin-right: 33%;
+  margin-left: 33%;
+
+  margin-top: 25%;
+  margin-bottom: 33%;
 
 }
 
@@ -39,9 +59,20 @@ button:enabled{
   color: white;
 }
 
-#upgrades>button{
+#bonusBox{
+ width:100%;
+ height: 10%;
+ background-color: grey;
+ display: inline-block;
+ margin-bottom: 1%;
+ text-align: center;
+}
+
+#bonus>button{
   border: none;
-  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
   height: 10%;
   margin-bottom: 1%;
   display: block;

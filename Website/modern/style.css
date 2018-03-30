@@ -10,7 +10,7 @@ body{
   display:block;
   padding: 0;
 
-  
+
 
 }
 .clearfix:after {
@@ -72,7 +72,7 @@ a{
   background-color: rgb(205, 204, 205);
   text-decoration: none;
   display: block;
-  height: 10%;
+  height: 5%;
   width: 80%;
   margin-left:10%;
   margin-right: 10%;

@@ -1,0 +1,11 @@
+Noms des élèves:
+Oberle Loïc
+Butaye Maeva
+
+Pour compiler:
+javac *.java dans les dossiers Client,Noeud et Serveur
+
+Pour lancer l'application:
+-lancer le programme Recherche situé dans le dossier Serveur
+-lancer le programme Noeud situé dans le dossier Noeud avec comme parametre l'adresse ip de la machine hebergeant le serveur
+-lancer le programme Client situé dans le dossier Client avec comme parametre l'adresse ip de la machine hebergeant le serveur, le chemin vers le fichier texte, le mot que l'on veut remplacer et enfin le mot par lequel on veut le remplcer

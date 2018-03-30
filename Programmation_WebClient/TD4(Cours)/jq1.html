@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>in the mood for jQuery </title>
+        <link rel='stylesheet'  href='css/jq1.css'/>
+
+	</head>
+	<body>
+    <header>
+        <h1> les exos jQuery </h1>
+    </header>
+
+    <!-- section : slide : question slide -->
+    <div id="slider">
+        <p class="slidingContent">
+         texte qui va apparaitre au click
+        </p>
+        <button id="showContent">show me</button>
+    </div>
+
+    <!-- section : nav : question menu -->
+    <nav>
+        <ul id="menu">
+            <li class="menu"><p class="sub">menu 1</p>
+                <ul>
+                    <li><a href="#">sous-menu 1</a></li>
+                    <li><a href="#">sous-menu 2</a></li>
+                    <li><a href="#">sous-menu 3</a></li>
+                </ul>
+
+            </li>
+            <li class="menu"><p class="sub">menu 2</p>
+                <ul>
+                    <li><a href="#">sous-menu 1</a></li>
+                    <li><a href="#">sous-menu 2</a></li>
+                    <li><a href="#">sous-menu 3</a></li>
+                </ul>
+
+            </li>
+            <li class="menu"><p class="sub">menu 3</p>
+                <ul>
+                    <li><a href="#">sous-menu 1</a></li>
+                    <li><a href="#">sous-menu 2</a></li>
+                    <li><a href="#">sous-menu 3</a></li>
+                </ul>
+
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- section : text : question 1 -->
+    <hr>
+    <section id="text">
+        <p id="changingText" class="hop"> ceci est un texte qui change d'apparence lorsque l'on clique dessus</p>
+    </section>
+    <hr>
+
+
+    <!-- section : square : question boites -->
+    <section id="square">
+        <div class="boite_orange">1</div>
+        <div class="boite_orange">2</div>
+        <div class="boite_orange">3</div>
+        <div class="boite_orange">4</div>
+    </section>
+    <hr>
+        <button id="one">add !</button>
+        <button id="two">change !</button>
+        <button id="three">fadeToggle!</button>
+        <button id="four">modal</button>
+    <hr>
+
+    <!-- section : fenêtre modale   -->
+    <div class="modal" id="modal1">
+
+        <div id="modal_content">
+            <img src="img/JWJKQA3A0D.jpg">
+
+            <button id="modal_close">X</button>
+        </div>
+
+    </div>
+
+
+
+		<script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+
+    <script src='script.js'></script>
+	</body>
+</html>

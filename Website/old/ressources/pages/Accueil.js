@@ -1,0 +1,20 @@
+let accueil=[
+  "///////////////////////////////////////////////",
+  "/////////Site personnel de Loïc Oberle/////////",
+  "///////////////////////////////////////////////",
+  "",
+  "",
+  "",
+  "Liste des pages disponibles:",
+  "",
+  "<text  class=\"lien\">CV</text>      <text  class=\"lien\" >PROGRAMMES</text>     <text   class=\"lien\" >ACCUEIL</text>",
+  "",
+  "Utilisez la commande \"HELP\" pour une liste de toutes les commmandes  disponibles.",
+  "",
+  "Besoin d'une interface plus moderne? Suivez <a id='exterieur' href=\"modern/index.html\">ce lien.</a>",
+  "",
+  "Veuillez taper la commande en majuscule et",
+  "sans accent.",
+  "",
+  "Bonne visite"
+];

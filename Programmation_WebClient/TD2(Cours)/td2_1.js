@@ -22,19 +22,18 @@ console.log(range(1,10));
 
 function sumFor(tab){
   var s=0;
-  for (var i = 0; i < tab.length; i++) {
-    s+=tab[i];
-  }
+  for (var i = 0; i < tab.length; i++){
+    s+=tab[i];}
   return s;
 }
 
 function sumForEach(tab){
   var s=0;
-  tab.forEach((n)=>{s+=n});
+  tab.forEach((n)=>{s+=n})
   return s;
 }
 
-function sumReduce(tab){
+function sumReduce(tab){//deux arguments: valeure initial+ element courat
   let s=(a,e)=>a+e;
   return tab.reduce(s,0);
 }

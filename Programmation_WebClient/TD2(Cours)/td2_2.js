@@ -1,3 +1,4 @@
+
 /*Exercice 2.1*/
 function objTab(tab){
   return {"nbrElement":tab.length,"somme":sumFor(tab),"moyenne":moyFor(tab)}
@@ -14,7 +15,7 @@ var etudiant={
   "nom":"tetris",
   "prenom":"Lucas",
   "dateNaiss":new Date(2000,2,1),
-  "mail":"luca.tetris@hotmail.com",
+  "mail":"lucas.tetris@hotmail.com",
   "notes":[],
 
   calculerAge() {
@@ -25,7 +26,7 @@ var etudiant={
   info() {
     res='';
     res+="Prenom: "+this.prenom+", NOM: "+this.nom.toUpperCase()+", Date de naissance: ";
-    res+=this.dateNaiss.getMonth()+"/"+this.dateNaiss.getDay()+"/"+this.dateNaiss.getFullYear();
+    res+=(this.dateNaiss.getMonth()+1)+"/"+(this.dateNaiss.getDay()-2)+"/"+this.dateNaiss.getFullYear();
     return res;},
 
   moyenne() {
@@ -85,7 +86,7 @@ function Etudiant(num,nom,pre,jourNais,moisNais,anneeNais,mail) {
     this.info=function(){
       res='';
       res+="Prenom: "+this.prenom+", NOM: "+this.nom.toUpperCase()+", Date de naissance: ";
-      res+=this.dateNaiss.getMonth()+"/"+this.dateNaiss.getDay()+"/"+this.dateNaiss.getFullYear();
+      res+=(this.dateNaiss.getMonth()+1)+"/"+this.dateNaiss.getDay()+"/"+this.dateNaiss.getFullYear();
       return res;
     }
 
@@ -112,7 +113,7 @@ console.log(e);
 function anniversaire(etudiants,mois){
   res=[];
   for (var i = 0; i < etudiants.length; i++) {
-    if(etudiants[i].dateNaiss.getMonth()==mois-1){
+    if(etudiants[i].dateNaiss.getMonth()==mois){
       res.push(etudiants[i]);
     }
   }
@@ -120,7 +121,7 @@ function anniversaire(etudiants,mois){
 }
 
 console.log("Eleve dont l'anniversaire est en Mars");
-console.log(anniversaire([etudiant,e],3));
+console.log(anniversaire([etudiant,e],2));
 
 /*Exercice 2.8*/
 
@@ -144,4 +145,44 @@ function GroupeEtudiant(nom,form,liste,annee){
   this.formation=form;
   this.liste=liste;
   this.annee=annee;
+}
+
+/*Exercice 2.10*/
+GroupeEtudiant.ajouterEtudiant=function(etudiant){
+  liste.push(etudiant);
+}
+GroupeEtudiant.compterEtudiants=function(){
+  return liste.length;
+}
+GroupeEtudiant.moyenneEtudiants=function(etudiant){
+  let s=[]
+  for (var i = 0; i < liste.length; i++) {
+    s.push(liste[i].moyenne);
+  }
+  return s;
+}
+GroupeEtudiant.moyenneGroupeMatiere=function(mat){
+  let s=0;
+  let c=0;
+  for (var i = 0; i < liste.length; i++) {
+    for (var j = 0; j < liste[i].notes.length; j++) {
+      if(liste[i].notes[j].matiere==mat){
+        c++;
+        s+=liste[i].notes[j].note;
+      }
+    }
+  }
+  return s/c;
+}
+
+/*Exercice 2.11*/
+
+GroupeEtudiant.anniversaire=function(mois,mat){
+  for (var i = 0; i < liste.length; i++) {
+    for (var j = 0; j < liste[i].notes.length; j++) {
+      if(liste[i].notes[j].matiere==mat && liste[i].dateNaiss.getMonth()==mois){
+        liste[i].notes[j].note+=2;
+      }
+    }
+  }
 }

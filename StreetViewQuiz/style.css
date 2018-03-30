@@ -1,0 +1,55 @@
+img{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  height: 50%;
+}
+
+body{
+      background-color: rgb(235, 249, 209);
+}
+
+button{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+
+#newImage{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#answer{
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+vertical-align: top;
+}
+
+p{
+  color: black;
+  width: auto;
+  height: auto;
+  text-shadow: 1px 1px white;
+}
+select{
+  position: absolute;
+  top: 50%;
+}

@@ -1,0 +1,115 @@
+
+@font-face {
+  font-family: "smooth_pixels";
+  src: url("./ressources/font/smooth_pixels.ttf");
+}
+
+@font-face {
+    font-family: "big_pixels";
+    src:url("./ressources/font/big_pixels.ttf");
+}
+
+html{
+  font-family: "VT323","smooth_pixels",arial;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+::selection{
+  background-color: white;
+  color: white;
+}
+
+::-moz-selection{
+  color: grey;
+  background-color: white;
+}
+
+
+
+input{
+  text-decoration: none;
+  font-family: "VT323","smooth_pixels",arial;
+  color: white;
+  background-color: black;
+  height: auto;
+  width: 60%;
+  border: none;
+  font-size: 100%;
+}
+
+input:focus{
+  outline: none;
+    text-decoration: none;
+}
+
+
+
+#buffer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+img{
+  height: 300px;
+  width: 200px;
+}
+
+#bas{
+  background-color: black;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+}
+
+
+body{
+  max-height: 100%;
+}
+
+a{
+  font-style: bold;
+  color: gray;
+  background-color: white;
+  text-decoration: none;
+}
+a:visited{
+  font-style: bold;
+  color: grey;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+
+}
+
+.lien{
+  background-color: white;
+  color: grey;
+}
