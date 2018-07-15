@@ -1,0 +1,19 @@
+{
+  "name": "minefield",
+  "version": "0.0.1",
+  "description": "Mini game where you can evolve your miner society to mine more and more stone and ore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mine",
+    "game",
+    "miner",
+    "stone",
+    "ore",
+    "factory"
+  ],
+  "author": "Snauman",
+  "license": "ISC"
+}

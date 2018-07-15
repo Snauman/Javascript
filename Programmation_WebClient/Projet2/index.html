@@ -7,13 +7,27 @@
 
     <title>photobox</title>
 </head>
-<body>
+<body id="body">
 
+
+<div id="lightbox-container">
+    <section id = "lightbox" class = "lightbox-hidden">
+        <div id = "lightbox-head">
+            <h1 id = "lightbox-title"> TITRE </h1>
+            <h1 id = "lightbox-close"> - X - </h1>
+        </div>
+        <div id="lightbox-full">
+            <div id = "lightbox-prev"><h2>&lt;</h2></div>
+            <div id = "lightbox-next"><h2>&gt;</h2></div>
+            <img id ="lightbox-img" src="">
+        </div>
+    </section>
+</div>
 
 <div id="gallery">
     <nav>
 
-        <button id="load_gallery">load</button>
+        <button id="load-gallery">load</button>
 
         <button id="previous">prev page</button>
         <button id="next">next page</button>
@@ -21,50 +35,10 @@
 
     </nav>
 
-    <section>
-
-
-
-    <div class="gallery-container" id="photobox-gallery">
-
-        <div class="vignette" >
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38dc3123d.jpg"
-            src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38dc3123d.jpg">
-            <div>water-lily-1893220_1920</div>
-
-        </div>
-
-        <div class="vignette" >
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38dbc84ac.jpg"
-             src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38dbc84ac.jpg">
-            <div>water-1910237_1920</div>
-        </div>
-
-        <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38db67677.jpg"
-            src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38db67677.jpg">
-            <div>warren-falls-1935615_1920</div>
-       </div>
-
-       <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38db0444d.jpg"
-            src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38db0444d.jpg">
-            <div>roe-deer-1931979_1920</div>
-       </div>
-
-       <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38daa09e8.jpg"
-            src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38daa09e8.jpg">
-            <div>prairie-rattlesnake-1929345_1280</div>
-       </div>
-
-
-    </div>
+    <section class="gallery-container" id="photobox-gallery">
 
     </section>
 </div>
-
-<!-- lightbox container should come here -->
 
 
 <script
@@ -74,7 +48,7 @@
 
 <script> window.jQuery || document.write('<script src="lib/jquery/jquery.js"><\/script>') </script>
 
-<!--<script src="lib/photoloader/photoloader.js"></script>><!-->
+<script src="lib/photoloader/photoloader.js"></script>
 <script src="lib/photobox.js"></script>
 
 </body>

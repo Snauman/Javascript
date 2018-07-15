@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet"   href="css/main.css">
+
+    <title>photobox</title>
+</head>
+<body id="body">
+
+
+<div id="lightbox-container">
+    <section id = "lightbox" class = "lightbox-hidden">
+        <div id = "lightbox-head">
+            <h1 id = "lightbox-title"> TITRE </h1>
+            <h1 id = "lightbox-close"> - X - </h1>
+        </div>
+        <div id="lightbox-full">
+            <div id = "lightbox-prev"><h2>&lt;</h2></div>
+            <div id = "lightbox-next"><h2>&gt;</h2></div>
+            <img id ="lightbox-img" src="">
+        </div>
+    </section>
+</div>
+
+<div id="gallery">
+    <nav>
+
+        <button id="load-gallery">load</button>
+
+        <button id="previous">prev page</button>
+        <button id="next">next page</button>
+
+
+    </nav>
+
+    <section class="gallery-container" id="photobox-gallery">
+
+    </section>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+<script> window.jQuery || document.write('<script src="lib/jquery/jquery.js"><\/script>') </script>
+
+<script src="lib/photoloader/photoloader.js"></script>
+<script src="lib/photobox.js"></script>
+
+</body>
+</html>
+

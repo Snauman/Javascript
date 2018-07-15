@@ -20,7 +20,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+ }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -28,7 +29,12 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-family: Georgia;
+  font-family: hack;
+  font-family: first order plain;
+  font-family: Morpheus;
+}
 
 ol, ul {
   list-style: none; }
@@ -70,16 +76,21 @@ nav #next {
 .vignette {
   flex: 20em 0 0;
   padding: 2em;
-  border: 1px solid darkslategrey; }
+  border: 1px solid darkslategrey;
+  margin : 2px;
+  }
   .vignette img {
     max-width: 100%;
     height: auto; }
   .vignette div {
     text-align: center; }
 
-
-#lightbox_container {
-    display : none;
+#body {
+  position: relative;
+}
+#body #lightbox-container {
+  display: block;
+  height: 100%;
 }
 
 #lightbox {
@@ -90,7 +101,12 @@ nav #next {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.9); }
+  background: rgba(0, 0, 0, 0.9);
+}
+.lightbox-hidden{
+  display: none;
+}
+
 
 #lightbox-comments {
 
@@ -108,39 +124,39 @@ nav #next {
     justify-content: space-between;
 
 }
-#lightbox_photo_info, #lightbox_photo_comments {
+#lightbox-photo-info, #lightbox-photo-comments {
     width: 40%;
     padding: 1em
 }
 
-#lightbox_photo_info h2, #lightbox_photo_comments h2 {
+#lightbox-photo-info h2, #lightbox-photo-comments h2 {
     font-size: 1.5em;
     font-weight: 700;
 }
 
-#lightbox_photo_info h3, #lightbox_photo_comments h3 {
+#lightbox-photo-info h3, #lightbox-photo-comments h3 {
     font-size: 1.4em;
     font-weight: 600;
 }
-#lightbox_photo_info strong, #lightbox_photo_comments strong {
+#lightbox-photo-info strong, #lightbox-photo-comments strong {
     font-size: 1.2em;
     font-weight: 600;
     color: #1e1e1e;
 }
 
-#lightbox_photo_info p, #lightbox_photo_comments p {
+#lightbox-photo-info p, #lightbox-photo-comments p {
     margin-top:1em;
     color: #383838;
     padding-bottom: 0.5em;
 
 }
-p.comment_content {
+p.comment-content {
     padding-bottom: 1em;
     border-bottom: 1px solid dimgrey ;
 }
 
 #lightbox #lightbox-head {
-    height: 8%;
+    height: 12%;
     width: 100%;
     padding: 1em;
     background-color: rgba(0, 0, 0, 0.6);
@@ -154,55 +170,70 @@ p.comment_content {
       font-size: 2.4em;
       margin: auto; }
 
-#lightbox #lightbox-img {
+/*#lightbox #lightbox-img {
     width: 100%;
-    height: 92%;
+    height: 1%;
     position:relative;
-}
+}*/
 
 #lightbox img {
-    display: block;
+    display: inline-flex;
+    position: center;
     margin: auto;
-    width: auto;
+    width: 100%;
     height: auto;
     max-height: 100%;
     max-width: 100%;
 
 }
-
-#lightbox #lightbox_close {
+/*
+#lightbox-close{
+  position: absolute;
+  top:0;
+  left: 0;
+  color: white;
+}
+*/
+#lightbox #lightbox-close {
 
     background-color: black;
     opacity: 1;
     color: white;
     border: none;
-    /*position: absolute;
+    position: absolute;
     top: 0;
-    left: 0;*/
-    padding: 1em;
-    font-size: 1.5em;
+    left: 0;
+    padding: 0.2em;
+    font-size: 1em;
     border-radius: 1em;
 }
-#lightbox #lightbox_close:hover {
+#lightbox #lightbox-close:hover {
       background-color: dimgrey;
+      cursor: pointer;
+      transition: 1s;
 }
-#lightbox #lightbox_full {
+#lightbox #lightbox-full {
     /*z-index: 1001;*/
     background-color: black;
     opacity: 1;
     color: white;
     border: none;
-    /*position: absolute;
+    position: relative;
     top: 0;
     right: 0;
-    padding: 1em;*/
+    padding: 1em;
     font-size: 1.5em;
     border-radius: 1em;
 }
 
-#lightbox #lightbox_full:hover {
+#lightbox #lightbox-full:hover {
       background-color: dimgrey;
+      transition: 2s;
 }
+/*
+#lightbox-full{
+  min-height: 100%;
+}*/
 
 #lightbox #lightbox-next, #lightbox #lightbox-prev {
     height: 100%;
@@ -210,7 +241,7 @@ p.comment_content {
     padding: 1em;
     background-color: transparent;
     color: transparent;
-    position: absolute;
+    /*position: none;*/
     z-index: 1000;
     top: 0;
     display: flex;
@@ -218,9 +249,11 @@ p.comment_content {
     justify-content: center;
 }
 
-#lightbox #lightbox-next:hover, #lightbox #lightbox-prev:hover {
+#lightbox-full #lightbox-next:hover, #lightbox-full #lightbox-prev:hover {
       background-color: rgba(0, 0, 0, 0.6);
+      transition: 0.5s;
       color: white;
+      border-radius: 0 0 1em 1em;
 }
 
 #lightbox #lightbox-next > h2, #lightbox #lightbox-prev > h2 {
@@ -231,10 +264,14 @@ p.comment_content {
 
 #lightbox #lightbox-next {
     right: 0;
+    position: absolute;
+    cursor: pointer;
 }
 
 #lightbox #lightbox-prev {
     left: 0;
+    position: absolute;
+    cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
